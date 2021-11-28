@@ -5,7 +5,7 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemberService;
 import hello.core.member.MemberServiceImpl;
-import hello.core.member.MemoryMemberRepositoryImpl;
+import hello.core.member.MemoryMemberRepository;
 import hello.core.order.OrderService;
 import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -14,8 +14,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    //@Bean memberService > new MemoryMemberRepositoryImpl();
-    //@Bean orderSErvice > new MemmoryMemberRepositoryImpl(); ??
+    //@Bean memberService > new MemoryMemberRepository();
+    //@Bean orderSErvice > new MemmoryMemberRepository(); ??
 
 
 
@@ -34,7 +34,7 @@ public class AppConfig {
     @Bean
     public MemberRepository memberRepository() {
         System.out.println("call appconfig.memberRepository");
-        return new MemoryMemberRepositoryImpl();
+        return new MemoryMemberRepository();
     }
 
     @Bean
