@@ -12,7 +12,7 @@ class OrderServiceImplTest {
 
 
     @Test
-    void createOrder() { 
+    void createOrder() {
         MemoryMemberRepository memberRepository = new MemoryMemberRepository();
         memberRepository.save(new Member(1L, "memberA", Grade.VIP));
 
